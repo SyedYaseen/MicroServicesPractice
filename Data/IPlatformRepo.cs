@@ -1,8 +1,11 @@
+using PlatformService.Models;
+
 namespace PlatformService.Data;
 
-interface IPlatformRepo
+public interface IPlatformRepo
 {
-    void Add();
-    void Remove();
-
+    void SaveChanges();
+    IEnumerable<Platform> GetAllPlatforms();
+    Platform GetPlatformById(int Id);
+    void CreatePlatform(Platform platform);
 }
